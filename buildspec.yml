@@ -8,7 +8,6 @@ phases:
             - echo "installing something"
     pre_build:
         commands:
-            -printenv
             - echo "This is the pre build phase"
     build:
         commands:
@@ -17,6 +16,7 @@ phases:
             - grep -Fq "Welcome" index.html
     post_build:
         commands:
+            -printenv
             - echo "This is the post build phase"
             
 artifacts:
